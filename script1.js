@@ -1,23 +1,43 @@
 function problemOne() {
   //Get all the numbers from the form.
   let num1 = parseFloat(document.getElementById('num1').value);
-
+  let num2 = parseFloat(document.getElementById('num2').value);
+  let num3 = parseFloat(document.getElementById('num3').value);
+  let num5 = parseFloat(document.getElementById('num5').value);
+  let num6 = parseFloat(document.getElementById('num6').value);
   //Find the average, not including the lowest score.
+  var Mymin = findMin(num1, num2, num3, num4, num5, num6);
+  var sum = num1 + num2 + num3 + num4 + num5 + num6;
+  var sum2 = sum - Mymin
+  var avg = sum2 / 5;
+  window.alert(avg);
 
   //Print it to the console.
-  console.log(average);
+
 }
 
 function problemTwo() {
   //Get all the letter grades from the form.
   let grade1 = document.getElementById('grade1').value;
-
+  let grade2 = document.getElementById('grade2').value;
+  let grade3 = document.getElementById('grade3').value;
+  let grade4 = document.getElementById('grade4').value;
+  let grade5 = document.getElementById('grade5').value;
+  let grade6 = document.getElementById('grade6').value;
   //Compute the GPA.
-
+  var MyGPA = findGPA(grade1, grade2, grade3, grade4, grade5, grade6);
+  var myBoolean = Boolean(MyGPA > 2.99);
+  if(myBoolean === true){
+      document.getElementById("box").style.backgroundColor = "green";
+   }
+   if(myBoolean === false){
+       document.getElementById("box").style.backgroundColor = "red";
+    }
+  //window.alert(myBoolean);
   //Print it to the console.
 
   //If it is 3.0 or above, turn the div with id="box" green. Otherwise, turn it red.
-  // document.getElementById("box").style.backgroundColor = "orange";
+
 
 }
 
