@@ -10,7 +10,7 @@ function problemOne() {
   var sum = num1 + num2 + num3 + num4 + num5 + num6;
   var sum2 = sum - Mymin
   var avg = sum2 / 5;
-  window.alert(avg);
+  console.log(avg);
 
   //Print it to the console.
 
@@ -33,6 +33,7 @@ function problemTwo() {
    if(myBoolean === false){
        document.getElementById("box").style.backgroundColor = "red";
     }
+    console.log(myGPA);
   //window.alert(myBoolean);
   //Print it to the console.
 
